@@ -8,7 +8,7 @@ body, html {
 .page-container {
     display: flex;
     flex-direction: column;
-    min-height: 30vh;
+    min-height: 100vh;
 }
 
 header {
@@ -16,12 +16,17 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    position: fixed; /* Fix the header in place */
-    top: 0; /* Position it at the top */
-    width: calc(100% - 380px); /* Adjust for nav-panel width + padding */
     margin-left: 380px; /* Adjust for nav-panel width + padding */
-    z-index: 1000; /* Ensure the header is above other content */
 }
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .profile {
     display: flex;
     justify-content: center;
@@ -76,7 +81,7 @@ nav ul {
 
 nav ul li {
     display: inline-block; /* Displays list items in a row */
-    margin-right: 30px; /* Space between navigation items */
+    margin-right: 15px; /* Space between navigation items */
 }
 
 nav ul li a {
@@ -148,15 +153,14 @@ main {
 
 /* Footer Styling */
 .footer {
-    background-color: #BF988F;
+    background-color:#BF988F;
     color: #ecf0f1;
     padding: 20px;
     text-align: center;
-    width: calc(100% - 380px); /* Adjust for nav-panel width + padding */
-    margin-left: 380px; /* Adjust for nav-panel width + padding */
-    position: fixed; /* Fix the footer in place */
+    width: 100%;
     bottom: 0; /* Position it at the bottom */
     z-index: 1000; /* Ensure the footer is above other content */
+    margin-left: 380px; /* Adjust for nav-panel width + padding */
 }
 
 .footer-profile {
@@ -203,14 +207,14 @@ main {
 .footer-container {
     display: flex;
     justify-content: center;
-    gap: 100px; /* Add 15px space between items */
+    gap: 15px; /* Add 15px space between items */
     margin-bottom: 20px;
 }
 
 .footer-section {
     display: flex;
     align-items: center; /* Align items centrally */
-    gap: 10px; /* Add 5px space between icon and text */
+    gap: 10px; /* Add 10px space between icon and text */
 }
 
 .footer-section i {
@@ -237,6 +241,7 @@ main {
 }
 
 .footer-links a:hover {
+    color: #007bff; /* Blue color on hover */
     text-decoration: underline;
 }
 
