@@ -8,7 +8,7 @@ body, html {
 .page-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 30vh;
 }
 
 header {
@@ -19,11 +19,12 @@ header {
 }
 
 .header-container {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 380px; /* Adjust for nav-panel width + padding */
 }
 
 .profile {
@@ -80,7 +81,7 @@ nav ul {
 
 nav ul li {
     display: inline-block; /* Displays list items in a row */
-    margin-right: 15px; /* Space between navigation items */
+    margin-right: 30px; /* Space between navigation items */
 }
 
 nav ul li a {
@@ -94,7 +95,7 @@ nav ul li a:hover {
 
 /* Navigation Panel Styling */
 .nav-panel {
-    width: 300px;
+    width: 340px;
     background-color: #77A1A6;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -147,16 +148,18 @@ nav ul li a:hover {
 main {
     flex: 1;
     padding: 20px;
-    margin-left: 340px; /* Adjust for nav-panel width + padding */
+    margin-left: 380px; /* Adjust for nav-panel width + padding */
 }
 
 /* Footer Styling */
-.footer {
+
+.footer {    
     background-color:#BF988F;
     color: #ecf0f1;
     padding: 20px;
     text-align: center;
     width: 100%;
+    margin-left: 380px; /* Adjust for nav-panel width + padding */
 }
 
 .footer-profile {
@@ -202,22 +205,23 @@ main {
 
 .footer-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 100px; /* Add 15px space between items */
     margin-bottom: 20px;
 }
 
 .footer-section {
-    text-align: center;
+    display: flex;
+    align-items: center; /* Align items centrally */
+    gap: 10px; /* Add 5px space between icon and text */
 }
 
 .footer-section i {
-    display: block;
     font-size: 24px;
-    margin-bottom: 10px;
 }
 
 .footer-section p {
-    margin: 0;
+    margin: 0; /* Removed margin to bring elements closer */
     font-size: 14px;
 }
 
@@ -240,6 +244,6 @@ main {
 }
 
 .footer-links p {
-    margin: 10px 0 0 0;
+    margin: 20px 0 0 0; /* Added 20px margin to create space between icons and contact information */
     font-size: 14px;
 }
