@@ -18,15 +18,17 @@ header {
     text-align: center;
 }
 
-.header-container {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+header {
+    background-color: #D8D9D7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Fix the header in place */
+    top: 0; /* Position it at the top */
+    width: calc(100% - 380px); /* Adjust for nav-panel width + padding */
     margin-left: 380px; /* Adjust for nav-panel width + padding */
+    z-index: 1000; /* Ensure the header is above other content */
 }
-
 .profile {
     display: flex;
     justify-content: center;
@@ -152,14 +154,16 @@ main {
 }
 
 /* Footer Styling */
-
-.footer {    
-    background-color:#BF988F;
+.footer {
+    background-color: #BF988F;
     color: #ecf0f1;
     padding: 20px;
     text-align: center;
-    width: 100%;
+    width: calc(100% - 380px); /* Adjust for nav-panel width + padding */
     margin-left: 380px; /* Adjust for nav-panel width + padding */
+    position: fixed; /* Fix the footer in place */
+    bottom: 0; /* Position it at the bottom */
+    z-index: 1000; /* Ensure the footer is above other content */
 }
 
 .footer-profile {
