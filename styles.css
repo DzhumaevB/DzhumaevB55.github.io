@@ -145,7 +145,7 @@ body {
 }
 
 .pricing-card li:hover i {
-    color: #3498db;
+    color: #FFF;
     transform: scale(1.2);
 }
 
