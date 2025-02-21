@@ -1,14 +1,24 @@
-function toggleSection(button) {
-    const sectionContent = button.nextElementSibling;
-    const icon = button.querySelector('i');
+const toggleButtons = document.querySelectorAll('.toggle-button');
+        const priceElements = document.querySelectorAll('.price');
 
-    if (sectionContent.style.display === 'none' || sectionContent.style.display === '') {
-        sectionContent.style.display = 'block';
-        icon.classList.remove('fa-chevron-down');
-        icon.classList.add('fa-chevron-up');
-    } else {
-        sectionContent.style.display = 'none';
-        icon.classList.remove('fa-chevron-up');
-        icon.classList.add('fa-chevron-down');
-    }
-}
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Убираем класс "active" у всех кнопок
+                toggleButtons.forEach(btn => btn.classList.remove('active'));
+                // Добавляем класс "active" к нажатой кнопке
+                button.classList.add('active');
+
+                const period = button.dataset.period; // Получаем период (monthly или yearly)
+
+                priceElements.forEach(priceElement => {
+                    const monthlyPrice = priceElement.dataset.monthly;
+                    const yearlyPrice = priceElement.dataset.yearly;
+
+                    if (period === 'monthly') {
+                        priceElement.innerHTML = `${monthlyPrice} руб.<span>/месяц</span>`;
+                    } else {
+                        priceElement.innerHTML = `${yearlyPrice} руб.<span>/год</span>`;
+                    }
+                });
+            });
+        });

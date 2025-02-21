@@ -1,251 +1,151 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
-
-.page-container {
+body {
+    font-family: sans-serif;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-}
-
-header {
-    background-color: #D8D9D7;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    margin-left: 380px; /* Adjust for nav-panel width + padding */
-}
-
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.profile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.profile-photo {
-    border-radius: 50%; /* Makes the profile photo circular */
-    width: 50px; /* Size of the profile photo */
-    height: 50px; /* Size of the profile photo */
-    margin-right: 10px; /* Space between photo and text */
-}
-
-.profile-info h2 {
+    background-color: #f0f4f8;
     margin: 0;
-    font-size: 16px; /* Font size for name */
 }
 
-.profile-info p {
-    margin: 2px 0 0 0; /* Margin for position */
-    font-size: 12px; /* Font size for role */
-    color: #5C7373; /* Gray color for role text */
+.pricing {
+    text-align: center;
+    padding: 40px;
 }
 
-.social-icons {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.social-icons a {
-    margin-left:  5px; /* Space between social icons */
-}
-
-.social-icons img {
-    width: 20px; /* Size of social media icons */
-    height: 20px; /* Size of social media icons */
-}
-
-.divider {
-    margin-left: 5px; /* Space before divider */
-}
-
-nav ul {
-    list-style: none; /* Removes bullet points from list */
-    padding: 0; /* Removes padding from list */
-    margin-top: 10px; /* Space above nav menu */
-}
-
-nav ul li {
-    display: inline-block; /* Displays list items in a row */
-    margin-right: 15px; /* Space between navigation items */
-}
-
-nav ul li a {
-    text-decoration: none; /* Removes underline from links */
-    color: #6c757d; /* Gray color for links */
-}
-
-nav ul li a:hover {
-    color: #007bff; /* Blue color on hover */
-}
-
-/* Navigation Panel Styling */
-.nav-panel {
-    width: 340px;
-    background-color: #77A1A6;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.panel-buttons, .section {
+.pricing h2 {
+    font-size: 2.5em;
+    color: #333;
     margin-bottom: 20px;
 }
 
-.panel-button, .info-button, .section-header {
+.toggle-container {
     display: flex;
-    align-items: center;
-    padding: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.toggle-button {
+    background-color: #fff; /* Updated background color */
     border: none;
-    background: none;
+    color: #777; /* Updated text color */
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 20px;
     cursor: pointer;
-    width: 100%;
-    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
 }
 
-.panel-button:hover, .info-button:hover, .section-header:hover {
-    background-color: #f0f0f0;
+.toggle-button.active {
+    background-color: #3498db; /* Updated active button color */
+    color: #fff;
 }
 
-.panel-button i, .info-button i, .section-header i {
-    margin-right: 10px;
-}
-
-.section-header {
-    justify-content: space-between;
-}
-
-.section-header h4 {
-    margin: 0;
-    font-size: 14px;
-    color: #777;
-    text-transform: uppercase;
-}
-
-.section-content {
-    display: block;
-}
-
-main {
-    flex: 1;
-    padding: 20px;
-    margin-left: 380px; /* Adjust for nav-panel width + padding */
-}
-
-/* Footer Styling */
-.footer {
-    background-color:#BF988F;
-    color: #ecf0f1;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    bottom: 0; /* Position it at the bottom */
-    z-index: 1000; /* Ensure the footer is above other content */
-    margin-left: 380px; /* Adjust for nav-panel width + padding */
-}
-
-.footer-profile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.footer-profile-photo {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
-
-.footer-profile-info h3 {
-    margin: 0;
-    font-size: 16px;
-}
-
-.footer-profile-info p {
-    margin: 2px 0 0 0;
-    font-size: 12px;
-    color: #ecf0f1;
-}
-
-.footer-social-icons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.footer-social-icons a {
-    color: #ecf0f1;
-    margin: 0 10px;
-    font-size: 20px;
-}
-
-.footer-social-icons a:hover {
-    color: #3498db;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Add 15px space between items */
-    margin-bottom: 20px;
-}
-
-.footer-section {
-    display: flex;
-    align-items: center; /* Align items centrally */
-    gap: 10px; /* Add 10px space between icon and text */
-}
-
-.footer-section i {
-    font-size: 24px;
-}
-
-.footer-section p {
-    margin: 0; /* Removed margin to bring elements closer */
-    font-size: 14px;
-}
-
-.footer-links {
+.pricing-cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pricing-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #e0e0e0;
+    z-index: 1;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-card.professional {
+    background-color: #e8f4ff;
+    transform: scale(1.05) translateY(-10px);
+    z-index: 2;
+}
+
+.pricing-card h3 {
+    font-size: 1.8em;
+    color: #333;
     margin-bottom: 10px;
 }
 
-.footer-links a {
-    color: #ecf0f1;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 14px;
+.pricing-card p {
+    color: #666;
+    margin-bottom: 20px;
 }
 
-.footer-links a:hover {
-    color: #007bff; /* Blue color on hover */
-    text-decoration: underline;
+.price {
+    font-size: 2em;
+    color: #2ecc71;
+    margin-bottom: 20px;
 }
 
-.footer-links p {
-    margin: 20px 0 0 0; /* Added 20px margin to create space between icons and contact information */
-    font-size: 14px;
+.price span {
+    font-size: 0.6em;
+    color: #666;
 }
+
+.buy-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.buy-button:hover {
+    background-color: #2980b9;
+}
+
+.pricing-card h4 {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.pricing-card li {
+    color: #666;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* Change the color of icons as requested */
+.pricing-cards > div:nth-child(1) .pricing-card li i,
+.pricing-cards > div:nth-child(3) .pricing-card li i {
+    color: #CCC; /* Light gray for the outer cards */
+}
+
+.pricing-cards > div:nth-child(2) .pricing-card li i {
+    color: #FFF; /* White for the middle card */
+}
+
+.pricing-card li i {
+    margin-right: 5px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.pricing-card li:hover i {
+    color: #3498db;
+    transform: scale(1.2);
+}
+
